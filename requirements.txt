@@ -1,0 +1,10 @@
+streamlit
+numpy
+pandas
+matplotlib
+taurex
+platon
+astropy
+lightkurve
+astroquery
+etsi-watchdog

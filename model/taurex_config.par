@@ -1,0 +1,53 @@
+[Global]
+xsec_path = ./taurex_data/xsec
+cia_path  = ./taurex_data/cia
+
+[Chemistry]
+chemistry_type = taurex
+fill_gases = H2,He
+ratio = 4.8962e-2
+
+[[H2O]]
+gas_type = constant
+mix_ratio=1.0e-4
+
+[Temperature]
+profile_type = isothermal
+T = 1265.97764826
+
+[Pressure]
+profile_type = Simple
+atm_min_pressure = 1.0e-0
+atm_max_pressure = 1.0e6
+nlayers = 30
+
+[Planet]
+planet_type = Simple
+planet_mass = 1.0
+planet_radius = 0.999430455828
+
+[Star]
+star_type = blackbody
+temperature = 5800
+
+[Model]
+model_type = transmission
+
+[[Absorption]]
+
+[[CIA]]
+cia_pairs = H2-H2, H2-He
+
+[[Rayleigh]]
+
+[Optimizer]
+optimizer = nestle
+num_live_points = 100
+method = single
+
+[Output]
+save_spectrum = model/h2o_spectrum.txt
+output_path = results/
+save_txt = True
+save_netcdf = False
+save_hdf5 = True
